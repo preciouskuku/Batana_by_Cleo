@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import { FiMenu, FiX } from "react-icons/fi"; // Correct import from react-icons
 
 const HeroSection = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <section className="relative bg-[#F3DCC7] min-h-screen overflow-hidden">
       {/* Soft background blur/glow */}
@@ -11,9 +14,10 @@ const HeroSection = () => {
       <div className="absolute bottom-10 left-10 w-32 h-32 bg-[#7A4A2E] rounded-full opacity-35 blur-lg sm:w-40 sm:h-40"></div>
 
       {/* Navbar */}
-      <nav className="flex justify-between items-center px-4 sm:px-8 md:px-20 pt-6 sm:pt-8">
+      <nav className="flex justify-between items-center px-4 sm:px-8 md:px-20 pt-6 sm:pt-8 relative z-50">
         <img src="./logo.png" alt="batana by cleo" className="w-32 sm:w-40" />
 
+        {/* Desktop links */}
         <ul className="hidden md:flex items-center gap-6 lg:gap-8 border-2 border-[#8B5E3C] px-4 sm:px-6 py-2 rounded-full text-[#5A3E2B] font-medium">
           <li className="cursor-pointer underline font-semibold text-[#4B2E1E]">Home</li>
           <li className="cursor-pointer hover:text-[#3F2A1C]">Services</li>
@@ -21,10 +25,26 @@ const HeroSection = () => {
           <li className="cursor-pointer hover:text-[#3F2A1C]">Sign Up</li>
         </ul>
 
-        {/* Mobile menu placeholder */}
-        <div className="md:hidden text-[#5A3E2B] cursor-pointer">
-          {/* You can add a hamburger icon here */}
-          ☰
+        {/* Mobile Hamburger */}
+        <button
+          className="md:hidden text-[#5A3E2B] text-3xl"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <FiX /> : <FiMenu />}
+        </button>
+
+        {/* Mobile menu */}
+        <div
+          className={`fixed top-0 right-0 h-full w-2/3 bg-white shadow-lg transform transition-transform duration-300 ease-in-out md:hidden
+            ${menuOpen ? "translate-x-0" : "translate-x-full"}
+          `}
+        >
+          <ul className="flex flex-col mt-24 gap-6 px-6 text-[#5A3E2B] font-medium">
+            <li className="cursor-pointer underline font-semibold text-[#4B2E1E]" onClick={() => setMenuOpen(false)}>Home</li>
+            <li className="cursor-pointer hover:text-[#3F2A1C]" onClick={() => setMenuOpen(false)}>Services</li>
+            <li className="cursor-pointer hover:text-[#3F2A1C]" onClick={() => setMenuOpen(false)}>About Us</li>
+            <li className="cursor-pointer hover:text-[#3F2A1C]" onClick={() => setMenuOpen(false)}>Sign Up</li>
+          </ul>
         </div>
       </nav>
 
