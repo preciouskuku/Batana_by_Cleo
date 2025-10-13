@@ -23,7 +23,7 @@ const HeroSection = () => {
       </nav>
 
       {/* Main content */}
-      <div className="relative flex flex-col md:flex-row items-center justify-between px-20 md:px-20 mt-12 md:mt-5">
+      <div className="relative flex flex-col md:flex-row items-center justify-between px-20 md:px-20 mt-12 md:mt-4">
         {/* Text side */}
         <div className="max-w-lg z-50">
           <h1 className="text-5xl md:text-6xl font-extrabold text-[#4B2E1E] leading-tight mb-6">
