@@ -70,12 +70,11 @@ const HeroSection = () => {
           <img
             src="/leaf.png"
             alt="Leaf Decoration"
-            className="absolute -top-12 -right-6 sm:-top-16 sm:-right-10 w-20 sm:w-44 md:w-46"
+            className="absolute -top-12 -right-6 sm:-top-16 sm:-right-10 w-20 sm:w-44 md:w-46,"
           />
           {/* bottle */}
           <img
-            src="/hero.png"
-            alt="Hip & Bum Oil"
+            src="/hero.png"            alt="Hip & Bum Oil"
             className="
               relative z-10
               w-[90vw] max-w-[700px] sm:max-w-[800px] md:w-[700px] md:h-[600px]
