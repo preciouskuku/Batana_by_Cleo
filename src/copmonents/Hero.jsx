@@ -17,14 +17,13 @@ const HeroSection = () => {
       <nav className="flex justify-between items-center px-4 sm:px-8 md:px-20 pt-6 sm:pt-8 relative z-50">
         <img src="./logo.png" alt="batana by cleo" className="w-32 sm:w-40" />
 
-        {/* Desktop links */}
-        <ul className="hidden md:flex items-center gap-6 lg:gap-8 border-2 border-[#8B5A3E] px-4 sm:px-6 py-2 rounded-full text-[#5B4032] font-medium">
-          <li className="cursor-pointer underline font-semibold text-[#5B4032]">Home</li>
-          <li className="cursor-pointer hover:text-[#8B5A3E]">Services</li>
-          <li className="cursor-pointer hover:text-[#8B5A3E]">About Us</li>
-          <li className="cursor-pointer hover:text-[#8B5A3E]">Sign Up</li>
-        </ul>
-
+        {/* Enlarged Navbar Pills */}
+  <ul className="hidden md:flex items-center gap-10 lg:gap-14 border-[3px] border-[#8B5A3E] px-8 py-3 rounded-full text-[#5B4032] font-semibold text-lg tracking-wide bg-[#F3E3D5] backdrop-blur-sm">
+    <li className="cursor-pointer underline text-[#5B4032]">Home</li>
+    <li className="cursor-pointer hover:text-[#8B5A3E] transition-colors">Services</li>
+    <li className="cursor-pointer hover:text-[#8B5A3E] transition-colors">About Us</li>
+    <li className="cursor-pointer hover:text-[#8B5A3E] transition-colors">Sign Up</li>
+  </ul>
         {/* Mobile Hamburger */}
         <button
           className="md:hidden text-[#5B4032] text-3xl"
@@ -39,7 +38,7 @@ const HeroSection = () => {
             ${menuOpen ? "translate-x-0" : "translate-x-full"}
           `}
         >
-          <ul className="flex flex-col mt-24 gap-6 px-6 text-[#5B4032] font-medium">
+          <ul className="flex flex-col mt-24 gap-8 px-8 text-[#5B4032] font-medium">
             <li className="cursor-pointer underline font-semibold text-[#5B4032]" onClick={() => setMenuOpen(false)}>Home</li>
             <li className="cursor-pointer hover:text-[#8B5A3E]" onClick={() => setMenuOpen(false)}>Services</li>
             <li className="cursor-pointer hover:text-[#8B5A3E]" onClick={() => setMenuOpen(false)}>About Us</li>
@@ -48,43 +47,54 @@ const HeroSection = () => {
         </div>
       </nav>
 
-      {/* Main content */}
-      <div className="relative flex flex-col-reverse md:flex-row items-center justify-between px-4 sm:px-8 md:px-20 mt-8 md:mt-12">
-        {/* Text side */}
-        <div className="max-w-full md:max-w-lg z-50 text-center md:text-left">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-extrabold text-[#5B4032] leading-tight mb-4 sm:mb-6">
-            Confidence Starts From Within
-          </h1>
-          <p className="text-[#5B4032]/80 text-base sm:text-lg leading-relaxed font-body">
-            Naturally inspired beauty and wellness blends made to help you feel
-            lighter, radiant, and effortlessly confident.
-          </p>
-          <button className="mt-6 px-6 py-3 bg-[#8B5A3E] text-[#FFF9F5] rounded-full font-semibold font-body hover:bg-[#5B4032] transition-colors">
-            Get Started
+      {/* Hero bottle firmly on ground */}
+      <img
+        src="/hero.png"
+        alt="Hip & Bum Oil"
+        className="absolute right-0 bottom-0 z-0
+                   w-[100vw] sm:w-[700px] md:w-[800px] lg:w-[900px]
+                   object-contain opacity-90"
+        style={{
+          transform: "translateY(260px)", // push it slightly down to rest visually
+        }}
+      />
+
+      {/* Decorative leaf on top */}
+      <img
+        src="/leaf.png"
+        alt="Leaf Decoration"
+        className="absolute top-24 right-6 sm:top-16 sm:right-10 w-24 sm:w-44 md:w-52 z-20"
+      />
+
+      {/* Text content */}
+      <div className="relative z-10 flex flex-col justify-center md:justify-start px-4 sm:px-8 md:px-20 mt-12 md:mt-20 max-w-3xl">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-extrabold text-[#5B4032] leading-tight mb-6">
+          Confidence Starts <br /> From Within
+        </h1>
+        <p className="text-[#5B4032]/80 text-base sm:text-lg leading-relaxed font-body max-w-xl mb-8">
+          Naturally inspired beauty and wellness blends made to help you feel
+          lighter, radiant, and effortlessly confident.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4">
+          <button className="px-6 py-3 bg-[#8B5A3E] text-[#FFF9F5] rounded-full font-semibold font-body hover:bg-[#5B4032] transition-colors">
+            Shop Now
+          </button>
+          <button className="px-6 py-3 border border-[#8B5A3E] text-[#5B4032] rounded-full font-semibold font-body hover:bg-[#8B5A3E] hover:text-white transition-colors">
+            Learn More
           </button>
         </div>
 
-        {/* Bottle + leaves */}
-        <div className="relative mt-12 md:mt-0 w-full md:w-auto flex justify-center md:justify-end">
-          {/* decorative leaves */}
-          <img
-            src="/leaf.png"
-            alt="Leaf Decoration"
-            className="absolute -top-12 -right-6 sm:-top-16 sm:-right-10 w-20 sm:w-44 md:w-46,"
-          />
-          {/* bottle */}
-          <img
-            src="/hero.png"            alt="Hip & Bum Oil"
-            className="
-              relative z-10
-              w-[90vw] max-w-[700px] sm:max-w-[800px] md:w-[700px] md:h-[600px]
-              lg:w-[800px] lg:h-[650px]
-              h-[360px] sm:h-[500px]
-              object-cover
-              absolute bottom-0
-              "
-            style={{ borderRadius: 0, boxShadow: "none" }}
-          />
+        {/* About snippet */}
+        <div className="mt-10 border-l-2 border-[#5B4032]/40 pl-3">
+          <p className="italic text-sm font-medium text-[#5B4032]/80">
+            About the Brand (short snippet)
+          </p>
+          <p className="text-xs sm:text-sm text-[#5B4032]/70 mt-1">
+            “BatanaByCleo is more than a brand — it's a movement. Inspired by
+            nature, crafted with love, and dedicated to celebrating the beauty
+            and strength of every woman.”
+          </p>
         </div>
       </div>
 
