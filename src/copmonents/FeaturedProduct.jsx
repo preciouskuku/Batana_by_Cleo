@@ -30,7 +30,7 @@ const FeaturedProducts = () => {
   ];
 
   return (
-    <section className="bg-[#F3E3D5] py-20 relative overflow-hidden">
+    <section className="bg-[#F3E3D5] py-20 relative overflow-hidden border-t-2 border-[#333333]/90">
       <div className="container mx-auto px-4 sm:px-8 md:px-16">
         {/* Heading */}
         <div className="text-center mb-10 relative">
@@ -73,14 +73,14 @@ const FeaturedProducts = () => {
           ))}
         </div>
 
-        {/* Buttons */}
+        {/* Button */}
         <div className="flex justify-center mt-10">
           <button className="px-6 py-3 bg-[#8B5A3E] text-[#FFF9F5] rounded-full font-semibold hover:bg-[#5B4032] transition-colors">
             View More
           </button>
         </div>
 
-        {/* Arrows (static for design match) */}
+        {/* Arrows */}
         <div className="absolute top-1/2 left-5 transform -translate-y-1/2 hidden sm:flex">
           <button className="p-2 rounded-full bg-[#E9C9AE] text-[#5B4032] shadow-md">
             <FiChevronLeft size={24} />
