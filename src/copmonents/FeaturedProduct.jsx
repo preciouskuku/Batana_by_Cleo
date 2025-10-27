@@ -9,7 +9,7 @@ const FeaturedProducts = () => {
       price: "USD 30.00",
       description:
         "A natural sculpting blend that helps to expand healthy weight gain in desired areas.",
-      image: "/p1.png",
+      image: "/booty.png",
     },
     {
       id: 2,
@@ -17,7 +17,7 @@ const FeaturedProducts = () => {
       price: "USD 45.00",
       description:
         "Your all-in-one glow kit crafted for radiance, summer-ready feeling.",
-      image: "/p2.png",
+      image: "/citrus.jpg",
     },
     {
       id: 3,
@@ -25,25 +25,25 @@ const FeaturedProducts = () => {
       price: "USD 25.00",
       description:
         "For a daily glow to brighten, even tone, and healing confidence.",
-      image: "/p3.png",
+      image: "/glow.jpg",
     },
   ];
 
   return (
-    <section className="bg-[#F3E3D5] py-20 relative overflow-hidden border-t-2 border-[#333333]/90">
-      <div className="container mx-auto px-4 sm:px-8 md:px-16">
+    <section className="relative bg-[#D8B9A1] py-20 overflow-hidden border-t-2 border-[#333333]/90">
+      {/* Large decorative leaf background */}
+      <img
+        src="/leaf.png"
+        alt="Decorative Leaf"
+        className="absolute -top-10 right-0 w-[300px] sm:w-[400px] md:w-[480px] opacity-20 rotate-[10deg] z-0"
+      />
+
+      <div className="container mx-auto px-4 sm:px-8 md:px-16 relative z-10">
         {/* Heading */}
-        <div className="text-center mb-10 relative">
+        <div className="text-center mb-10">
           <h2 className="inline-block text-2xl sm:text-3xl md:text-4xl font-bold text-[#5B4032] bg-[#F3E3D5] px-6 rounded-full border-2 border-[#5B4032]/30">
             Featured Products
           </h2>
-
-          {/* Leaf decoration */}
-          <img
-            src="/leaf.png"
-            alt="Leaf Decoration"
-            className="absolute top-0 right-[43%] w-16 sm:w-20 opacity-90 rotate-[10deg]"
-          />
         </div>
 
         {/* Products grid */}
@@ -51,13 +51,13 @@ const FeaturedProducts = () => {
           {products.map((product) => (
             <div
               key={product.id}
-              className="bg-[#F8E9DD] rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 max-w-[300px] p-4 sm:p-6 flex flex-col items-center"
+              className="bg-[#F8E9DD] rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 max-w-[350px] flex flex-col items-center"
             >
               <div className="relative">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="rounded-xl mb-4 w-[250px] h-[250px] object-cover"
+                  className="rounded-xl mb-4 w-[350px] h-[350px] object-cover"
                 />
               </div>
               <h3 className="text-lg sm:text-xl font-semibold text-[#5B4032] mb-2">
