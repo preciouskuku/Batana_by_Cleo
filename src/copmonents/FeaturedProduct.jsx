@@ -1,5 +1,5 @@
 import React from "react";
-import { FiChevronLeft, FiChevronRight, FiShoppingCart } from "react-icons/fi";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 const FeaturedProducts = () => {
   const products = [
@@ -51,7 +51,7 @@ const FeaturedProducts = () => {
           {products.map((product) => (
             <div
               key={product.id}
-              className="bg-[#F3E3D5] rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 max-w-[350px] flex flex-col items-center relative"
+              className="bg-[#F3E3D5] rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 max-w-[350px] flex flex-col items-center relative "
             >
               <div className="relative">
                 <img
@@ -66,9 +66,10 @@ const FeaturedProducts = () => {
               <p className="text-sm text-[#5B4032]/80 mb-3 text-center leading-relaxed">
                 {product.description}
               </p>
-              {/* Price with cart icon at bottom right */}
-              <p className="absolute bottom-4 right-4 bg-[#8B5A3E] font-semibold text-[#FFF9F5] text-sm sm:text-base px-4 py-2 rounded-full flex items-center gap-2">
-                <FiShoppingCart /> {product.price}
+              {/* Price at bottom of card */}
+              <p className="  mt-auto bg-[#8B5A3E] font-semibold text-[#FFF9F5] text-sm sm:text-base px-4 py-2 rounded-xl mb-4">
+            
+                {product.price}
               </p>
             </div>
           ))}
