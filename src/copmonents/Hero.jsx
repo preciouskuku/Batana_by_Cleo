@@ -18,12 +18,13 @@ const HeroSection = () => {
         <img src="./logo.png" alt="batana by cleo" className="w-32 sm:w-40" />
 
         {/* Enlarged Navbar Pills */}
-  <ul className="hidden md:flex items-center gap-10 lg:gap-14 border-[3px] border-[#8B5A3E] px-8 py-3 rounded-full text-[#5B4032] font-semibold text-lg tracking-wide bg-[#F3E3D5] backdrop-blur-sm">
-    <li className="cursor-pointer underline text-[#5B4032]">Home</li>
-    <li className="cursor-pointer hover:text-[#8B5A3E] transition-colors">Services</li>
-    <li className="cursor-pointer hover:text-[#8B5A3E] transition-colors">About Us</li>
-    <li className="cursor-pointer hover:text-[#8B5A3E] transition-colors">Sign Up</li>
-  </ul>
+        <ul className="hidden md:flex items-center gap-10 lg:gap-14 border-[3px] border-[#8B5A3E] px-8 py-3 rounded-full text-[#5B4032] font-semibold text-lg tracking-wide bg-[#F3E3D5] backdrop-blur-sm">
+          <li className="cursor-pointer underline text-[#5B4032]">Home</li>
+          <li className="cursor-pointer hover:text-[#8B5A3E] transition-colors">Services</li>
+          <li className="cursor-pointer hover:text-[#8B5A3E] transition-colors">About Us</li>
+          <li className="cursor-pointer hover:text-[#8B5A3E] transition-colors">Sign Up</li>
+        </ul>
+
         {/* Mobile Hamburger */}
         <button
           className="md:hidden text-[#5B4032] text-3xl"
@@ -47,36 +48,27 @@ const HeroSection = () => {
         </div>
       </nav>
 
-      {/* Hero bottle firmly on ground */}
+      {/* Hero bottle */}
       <img
         src="/hero.png"
         alt="Hip & Bum Oil"
         className="absolute right-0 bottom-0 z-0
                    w-[100vw] sm:w-[700px] md:w-[800px] lg:w-[900px]
-                   object-contain opacity-90"
-        style={{
-          transform: "translateY(260px)", // push it slightly down to rest visually
-        }}
-      />
-
-      {/* Decorative leaf on top */}
-      <img
-        src="/leaf.png"
-        alt="Leaf Decoration"
-        className="absolute top-24 right-6 sm:top-16 sm:right-10 w-24 sm:w-44 md:w-52 z-20"
+                   object-contain opacity-90
+                   sm:translate-y-[260px] translate-y-[100px]" // raised only on mobile
       />
 
       {/* Text content */}
-      <div className="relative z-10 flex flex-col justify-center md:justify-start px-4 sm:px-8 md:px-20 mt-12 md:mt-20 max-w-3xl">
+      <div className="relative z-10 flex flex-col justify-center md:justify-start px-4 sm:px-8 md:px-20 mt-20 md:mt-20 max-w-3xl text-center md:text-left">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-heading font-extrabold text-[#5B4032] leading-tight mb-6">
-          Confidence Starts <br /> From Within
+          Confidence Starts <br className="hidden sm:block" /> From Within
         </h1>
-        <p className="text-[#5B4032]/80 text-base sm:text-lg leading-relaxed font-body max-w-xl mb-8">
+        <p className="text-[#5B4032]/80 text-base sm:text-lg leading-relaxed font-body max-w-xl mx-auto md:mx-0 mb-8">
           Naturally inspired beauty and wellness blends made to help you feel
           lighter, radiant, and effortlessly confident.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4">
+        <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
           <button className="px-6 py-3 bg-[#8B5A3E] text-[#FFF9F5] rounded-full font-semibold font-body hover:bg-[#5B4032] transition-colors">
             Shop Now
           </button>
@@ -86,7 +78,7 @@ const HeroSection = () => {
         </div>
 
         {/* About snippet */}
-        <div className="mt-10 border-l-2 border-[#5B4032]/40 pl-3">
+        <div className="mt-10 border-l-2 border-[#5B4032]/40 pl-3 md:pl-3 mx-auto md:mx-0 text-left md:text-left max-w-sm md:max-w-none">
           <p className="italic text-sm font-medium text-[#5B4032]/80">
             About the Brand (short snippet)
           </p>
