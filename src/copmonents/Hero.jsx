@@ -83,7 +83,7 @@ const HeroSection = () => {
             About the Brand (short snippet)
           </p>
           <p className="text-xs sm:text-sm text-[#5B4032]/70 mt-1">
-            “BatanaByCleo is more than a brand — it's a movement of confidence. Inspired by
+            “BatanaByCleo is more than a brand — it's a movement of . Inspired by
             nature, crafted with love, and dedicated to celebrating the beauty
             and strength of every woman.”
           </p>
