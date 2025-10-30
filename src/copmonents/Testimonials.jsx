@@ -8,21 +8,21 @@ const testimonials = [
     id: 1,
     name: "Precious Kutema",
     age: 20,
-    image: "/imgs/test1.jpg", // replace with your actual image path
+    image: "/test1.jpg", // replace with your actual image path
     text: "I’mma just say at first I thought it was a scam like other products but my friends convinced me to try them and it was the best decision I ever made.",
   },
   {
     id: 2,
     name: "Silence Sirene",
     age: 22,
-    image: "/imgs/test2.jpg",
+    image: "/test2.jpg",
     text: "I’mma just say at first I thought it was a scam like other products but my friends convinced me to try them and it was the best decision I ever made.",
   },
   {
     id: 3,
     name: "Faith Ndlovu",
     age: 35,
-    image: "/imgs/test3.jpg",
+    image: "/test3.jpg",
     text: "I’mma just say at first I thought it was a scam like other products but my friends convinced me to try them and it was the best decision I ever made.",
   },
 ];
