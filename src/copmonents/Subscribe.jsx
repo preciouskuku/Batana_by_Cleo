@@ -13,8 +13,8 @@ const CallToAction = () => {
       </div>
 
       {/* Right side - Text */}
-      <div className="bg-[#8A5839] w-full md:w-1/2 text-center md:text-left  md:px-5 py-0 md:py-0 text-white flex flex-col justify-center items-center md:items-start md:h-[300px]">
-        <p className="text-xl md:text-3xl italic font-light leading-relaxed">
+      <div className="bg-[#8A5839] w-full md:w-3/4 text-center md:text-left  md:px-5 py-0 md:py-0 text-white flex flex-col justify-center items-center md:items-start md:h-[300px]">
+        <p className="text-xl md:text-2xl  leading-relaxed">
           “Join thousands of women who trust
           <br />
           <span className="font-medium not-italic">BatanaByCleo</span> to
